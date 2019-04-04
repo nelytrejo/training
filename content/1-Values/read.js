@@ -2,7 +2,7 @@
 console.log("Pokemon Playground");
 
 // 1. Values && Bindings
-const pokedexNumber = 4;
+const pokedexNumber = 4; 
 const pokemonType = 'Fire';
 let pokemonName = 'Charmander';
 let pokemonLevel = 1;
@@ -28,7 +28,7 @@ console.log(currentMoves.length); // => 2;
 currentMoves.push(potentialMoves[0]);
 console.log(currentMoves.length); // => 3
 
-// 3. Objects - Contextual values
+// 3. Objects - Contextual values  
 
 const pikachu = {
   number: 25,
