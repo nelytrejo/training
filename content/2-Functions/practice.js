@@ -30,13 +30,10 @@ const lengAlum = students.map((st) => {
 
 console.log(lengAlum)
 
-
-
-function sendEmail(student) {
-  console.log(`Dear ${student.name}, you are accepted at CeroUno.io`);
-  console.log(`Email sent to: ${student.email}`);
+function se(student) {
 
 }
+
 
 
 
