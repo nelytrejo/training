@@ -9,6 +9,7 @@ const trainers = [
 // Pure functions
 
 // Filter. All trainers with more than two pokemon
+//Filtrar. Todos los entrenadores con más de dos pokemon.
 const packedTrainers = trainers.filter((trainer) => {
   return trainer.pokemon > 2;
 });
@@ -27,6 +28,7 @@ console.log(firstTwo);
 // Methods that modify the array itselt
 
 // Sort. Trainers by defeats
+//Ordenar. Entrenadores por derrotas.
 const trainersByDefeat = trainers.slice().sort((trainerA, trainerB) => {
   return trainerB.defeats >= trainerA.defeats;
 });

@@ -1,6 +1,7 @@
 // Functions
 
 // 1. Side effect functions
+//Funciones de efectos secundarios
 function speak () {
   console.log('Char!');
 }
@@ -15,6 +16,7 @@ logPokemonInfo(4, 'Charmander', 'Fire') // => #4 - Charmander (Fire)
 // 2. Pure functions
 
 // With return values
+//Con valores de retorno
 function levelUp (currentLevel) {
   return currentLevel + 1;
 }
@@ -28,6 +30,7 @@ console.log(criticalHit(100)); // => 90.0
 // 3. Functions as first class Citizens
 
 // 3.1 Functions as values - Difference: Footnote 1
+//Funciones como valores - Diferencia: Nota al pie 1
 const hasFainted = function (currentHealth) {
   return currentHealth > 0;
 };
@@ -47,22 +50,26 @@ const pokemonTeam = [
 ];
 
 // Use of an anonymous function - Footnote 3
+//Uso de una función anónima - Nota 3
 const fireTypePokemon = pokemonTeam.filter((pokemon) => {
   return pokemon.type === 'fire';
 });
 
 // 3.3 Functions as parameters
+//Funciones como parámetros.
 const waterTypePokemon = pokemonTeam.filter(isWaterType);
 
 // 4. Useful functions
 
 // 4.1 Map
 // Get a list of my types of pokemon
+//Obtener una lista de mis tipos de pokemon
 const pokemonTypes = pokemonTeam.map((pokemon) => {
   return pokemon.type;
 });
 
-// Get a list of only the name and hp of the pokemon team
+// Get a list of only the name and hp of the pokemon team 
+//Obtén una lista de solo el nombre y los caballos de fuerza del equipo de pokemon
 const ashsPokemon = pokemonTeam.map((pokemon) => {
   return {
     name: pokemon.name,
@@ -72,6 +79,7 @@ const ashsPokemon = pokemonTeam.map((pokemon) => {
 
 // 4.2 Reduce
 // Get a combined HP of all my Pokemon
+//Consigue un HP combinado de todos mis Pokémon.
 const ashsHP = pokemonTeam.reduce((total, pokemon) => {
   total + pokemon.hp;
 });
@@ -88,6 +96,7 @@ pokemonTeam.forEach((pokemon) => {
 });
 
 // Increase level of all pokemon
+//Aumentar el nivel de todos los pokemon.
 pokemonTeam.forEach((pokemon) => {
   pokemon.lvl += 1;
 });
