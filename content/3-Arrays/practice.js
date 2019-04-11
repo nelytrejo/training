@@ -49,7 +49,7 @@ const worldCupTeams = [
 ];
 
 
-//Get a list of all the team names
+//0. Get a list of all the team names
 //Obtener una lista de todos los nombres de equipos
 
 const nombEquipos = worldCupTeams.map((cup) => {
@@ -61,12 +61,61 @@ console.log('\n') //salto de linea
 
 
 
-//What is the youngest team ?
+
+//1. What is the youngest team ?
 //¿Cuál es el equipo más joven
 
 const equipoJoven = worldCupTeams.sort((a, b) => {
   return a.mid_age - b.mid_age;
 })[0];
 console.log(equipoJoven);
-console.log({equipoJoven: equipoJoven})
+console.log('\n')
 //sort es metodo aplicado entre un arreglo, te entrega un arreglo ordenado
+
+
+
+
+//2. What is the team that participated the most ?
+//¿Cuál es el equipo que más participó?
+
+const equipoParticipo = worldCupTeams.sort((x, y) => {
+  return y.participations - x.participations;
+});
+console.log({ mayorParticipacion: equipoParticipo[0] });
+console.log({ menorMayor: equipoParticipo});
+console.log('\n')
+
+
+
+//3. What is the average market value of all teams ?
+//¿Cuál es el valor de mercado promedio de todos los equipos?
+
+const valorMercado = worldCupTeams.reduce((promedio, e) => {
+  return promedio + e.market;
+}, 0);
+console.log(`El valor de mercado promedio de los equipos son: ${(valorMercado / worldCupTeams.length)}`)
+
+
+//Get a list of all the teams sorted from most participations to least.
+// Sample:
+//{
+//   "country":"France",
+//   "mid_age":26,
+//   "participations":15,
+//   "abroad_percentage":69.6,
+//   "market":916.65,
+//   "mid_market_value":39.85
+// }
+//Obtenga una lista de todos los equipos ordenados de la mayoría de las participaciones al menos.
+//Muestra:
+//país": "Francia",
+// "Edad media": 26,
+// "participaciones": 15,
+// "porcentaje en el extranjero": 69.6,
+// "mercado": 916.65,
+// "valor medio de mercado": 39.85
+
+//console.log({ menorMayor: equipoParticipo}); esto esta arriba 
+
+
+

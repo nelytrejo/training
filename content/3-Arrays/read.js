@@ -46,6 +46,8 @@ console.log(lastTrainer, trainers);
 // Get a list of each trainers success ratio: Success / Total Battles
 
 // 1. Solve it for 1 trainer
+//Resuélvelo para 1 entrenador.
+
 const successRatio = function (trainer) {
   const totalBattles = trainer.wins + trainer.defeats;
   return trainer.wins / totalBattles;
